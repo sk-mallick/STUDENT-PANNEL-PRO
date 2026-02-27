@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Practice English grammar with interactive MCQ and fill-in-the-blank sets — EnglishJibi Classes.">
+    <title>Practice — EnglishJibi Classes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Full-width quiz — no max-width cap */
+        #quiz-container {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body class="bg-center-glow min-h-screen md:h-screen flex flex-col text-white">
+
+    <!-- ══════════════════════════════════════════════════
+         STICKY WRAPPER — keeps brand bar + header pinned
+    ══════════════════════════════════════════════════ -->
+    <div id="sticky-header-wrap" class="sticky top-0 z-[60] flex-none">
+
+        <!-- MOBILE BRANDING BAR — hidden on md+ -->
+        <div class="brand-bar w-full flex items-center justify-center py-3 px-4">
+            <p class="text-[22px] leading-none font-black uppercase tracking-tight select-none">
+                <span style="color:#ffffff">ENGLISH</span><span style="color:#cc2200">JIBI</span><span
+                    style="color:#ffffff"> CLASSES</span>
+            </p>
+        </div>
+
+        <!-- PRACTICE HEADER — injected by engine.js -->
+        <div id="header-mount"></div>
+
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         QUESTION AREA — scrollable
+    ══════════════════════════════════════════════════ -->
+    <main id="quiz-scroller" class="flex-1 md:overflow-y-auto no-scrollbar relative w-full pb-[96px]" role="main"
+        aria-label="Practice questions">
+        <div id="quiz-container" class="w-full mx-auto px-4 md:px-8 xl:px-16 py-6 flex flex-col" aria-live="polite">
+            <!-- Skeletons injected by engine.js while loading -->
+        </div>
+    </main>
+
+    <!-- ══════════════════════════════════════════════════
+         FIXED BOTTOM ACTION BAR
+    ══════════════════════════════════════════════════ -->
+    <div id="bottom-bar" class="fixed bottom-0 left-0 w-full p-4
+                bg-[#020617]/95 backdrop-blur-xl
+                border-t border-slate-800 z-40 hidden shadow-lg" role="toolbar" aria-label="Quiz actions">
+        <!-- Submit button injected by engine.js -->
+    </div>
+
+    <script type="module" src="js/engine.js"></script>
+</body>
+
+</html>

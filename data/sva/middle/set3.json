@@ -1,0 +1,17 @@
+[
+    { "q": "He as well as Moti ________ tired of work.", "options": ["is", "are"], "answer": 0 },
+    { "q": "Either Mohan or I ________ mistaken.", "options": ["am", "are"], "answer": 0 },
+    { "q": "We have two pens which ________ new.", "options": ["is", "are"], "answer": 1 },
+    { "q": "The news he gave ________ true.", "options": ["is", "are"], "answer": 0 },
+    { "q": "He and I ________ friends.", "options": ["am", "are"], "answer": 1 },
+    { "q": "One hundred rupees ________ a big sum.", "options": ["is", "are"], "answer": 0 },
+    { "q": "The voice of the singers ________ sweet.", "options": ["is", "are"], "answer": 0 },
+    { "q": "Neither Tom nor Jack ________ a book.", "options": ["has", "have"], "answer": 0 },
+    { "q": "Physics ________ a very good subject.", "options": ["was", "were"], "answer": 0 },
+    { "q": "Rice and curry ________ his favorite dish.", "options": ["is", "were"], "answer": 0 },
+    { "q": "You he and I ________ friends.", "options": ["were", "was"], "answer": 0 },
+    { "q": "The rich ________ happy.", "options": ["was", "were"], "answer": 1 },
+    { "q": "I wish I ________ a great man.", "options": ["was", "were"], "answer": 1 },
+    { "q": "Slow and steady ________ the race.", "options": ["win", "wins"], "answer": 1 },
+    { "q": "If I ___ rich, I would buy a car.", "options": ["was", "were"], "answer": 1 }
+]

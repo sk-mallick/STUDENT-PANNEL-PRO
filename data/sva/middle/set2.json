@@ -1,0 +1,17 @@
+[
+    { "q": "The price of tomatoes ________ gone up.", "options": ["has", "have"], "answer": 0 },
+    { "q": "Each of the boys ________ intelligent.", "options": ["is", "are"], "answer": 0 },
+    { "q": "Where ________ you going?", "options": ["are", "is"], "answer": 0 },
+    { "q": "Where ________ you go?", "options": ["do", "did"], "answer": 0 },
+    { "q": "Either you or he ________ broken this cup.", "options": ["has", "have"], "answer": 0 },
+    { "q": "The number of students in this school ________ very large.", "options": ["is", "are"], "answer": 0 },
+    { "q": "I wish I ________ a rich man.", "options": ["was", "were"], "answer": 1 },
+    { "q": "Each of the boys ________ finished his work.", "options": ["have", "has"], "answer": 1 },
+    { "q": "The cattle ________ seen on the road.", "options": ["is", "are"], "answer": 1 },
+    { "q": "Neither of them ________ come.", "options": ["has", "have"], "answer": 0 },
+    { "q": "He wishes he ________ a rich man.", "options": ["was", "were"], "answer": 1 },
+    { "q": "The people of this village ________ hard working.", "options": ["is", "are"], "answer": 1 },
+    { "q": "Each of the players ________ got a medal.", "options": ["has", "have"], "answer": 0 },
+    { "q": "Each boy and each girl ________ a separate room.", "options": ["has", "have"], "answer": 0 },
+    { "q": "Profit and loss ________ a part of a business.", "options": ["is", "are"], "answer": 0 }
+]

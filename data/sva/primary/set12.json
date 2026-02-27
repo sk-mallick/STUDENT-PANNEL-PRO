@@ -1,0 +1,17 @@
+[
+    { "q": "Riches ___ in hell.", "options": ["grow", "grows"], "answer": 0 },
+    { "q": "Arms and the Man ___ a famous play.", "options": ["is", "are"], "answer": 0 },
+    { "q": "The gentry ___ a luxurious life.", "options": ["lead", "leads"], "answer": 0 },
+    { "q": "What I need ___ a colour TV.", "options": ["is", "are"], "answer": 0 },
+    { "q": "The greens ___ not fresh.", "options": ["is", "are"], "answer": 1 },
+    { "q": "Rekha wants to help you; so ___ Veena.", "options": ["does", "do"], "answer": 0 },
+    { "q": "Manisha does not like me, neither ___ you.", "options": ["do", "does"], "answer": 0 },
+    { "q": "My students were present there, so ___ I.", "options": ["was", "were"], "answer": 0 },
+    { "q": "Sushma is a singer, as ___ her sister.", "options": ["is", "are"], "answer": 0 },
+    { "q": "Rajani is intelligent, as ___ her brother.", "options": ["is", "are"], "answer": 0 },
+    { "q": "The teeth of the girl ___ white.", "options": ["is", "are"], "answer": 1 },
+    { "q": "He ordered as if he ___ my boss.", "options": ["was", "were"], "answer": 1 },
+    { "q": "The number of books ___ increasing.", "options": ["is", "are"], "answer": 0 },
+    { "q": "You and I ___ good friends.", "options": ["is", "are"], "answer": 1 },
+    { "q": "The blind ___ helpless.", "options": ["is", "are"], "answer": 1 }
+]

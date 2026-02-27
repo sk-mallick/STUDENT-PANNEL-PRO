@@ -1,0 +1,17 @@
+[
+    { "q": "One of the pupils in our class ______ a car.", "options": ["own", "owns"], "answer": 1 },
+    { "q": "The Lions of the East ______ an interesting book.", "options": ["is", "are"], "answer": 0 },
+    { "q": "Apple pie and custard ______ my favourite dish.", "options": ["is", "are"], "answer": 0 },
+    { "q": "Ten kilometres ______ a long way to walk.", "options": ["is", "are"], "answer": 0 },
+    { "q": "Mohan, as well as Sohan, ______ guilty.", "options": ["was", "were"], "answer": 0 },
+    { "q": "Neither John nor you ______ present.", "options": ["was", "were"], "answer": 1 },
+    { "q": "Either Shobha or I ______ to blame.", "options": ["is", "am"], "answer": 1 },
+    { "q": "Neither of them ______ wrong.", "options": ["was", "were"], "answer": 0 },
+    { "q": "The council ______ chosen its president.", "options": ["has", "have"], "answer": 0 },
+    { "q": "Two and two ______ four.", "options": ["make", "makes"], "answer": 1 },
+    { "q": "The cost of all these articles ______ high.", "options": ["has", "have"], "answer": 0 },
+    { "q": "All the students in our college ______ English.", "options": ["learn", "learns"], "answer": 0 },
+    { "q": "The quality of the mangoes ______ not good.", "options": ["was", "were"], "answer": 0 },
+    { "q": "Each of these minerals ______ found in India.", "options": ["is", "are"], "answer": 0 },
+    { "q": "Iron, as well as coal, ______ found in India.", "options": ["is", "are"], "answer": 0 }
+]

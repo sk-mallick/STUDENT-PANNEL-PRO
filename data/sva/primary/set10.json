@@ -1,0 +1,17 @@
+[
+    { "q": "A bird _______ in the sky.", "options": ["fly", "flies"], "answer": 1 },
+    { "q": "His secretary and his typist ______ on leave today.", "options": ["is", "are"], "answer": 1 },
+    { "q": "His father and mother ______ there.", "options": ["is", "are"], "answer": 1 },
+    { "q": "________ Mr. Mishra or Mr. Pandey in the class?", "options": ["is", "are"], "answer": 0 },
+    { "q": "Age and experience ___ wisdom to man.", "options": ["bring", "brings"], "answer": 1 },
+    { "q": "A large number of students ___ applied for the job.", "options": ["has", "have"], "answer": 1 },
+    { "q": "Physics ___ his poorest subject.", "options": ["is", "are"], "answer": 0 },
+    { "q": "The majority of them ___ Sikhs.", "options": ["is", "are"], "answer": 1 },
+    { "q": "A great number of people ___ come here.", "options": ["has", "have"], "answer": 1 },
+    { "q": "Fifty kilos ___ heavy for me to carry.", "options": ["is", "are"], "answer": 0 },
+    { "q": "Pankaj, like his father, ___ very tall.", "options": ["is", "are"], "answer": 0 },
+    { "q": "What I now need ___ mental peace.", "options": ["is", "are"], "answer": 0 },
+    { "q": "India ___ produced great cricketers.", "options": ["has", "have"], "answer": 0 },
+    { "q": "Two hundred rupees ___ distributed.", "options": ["was", "were"], "answer": 0 },
+    { "q": "A pair of shoes ___ in this room.", "options": ["is", "are"], "answer": 0 }
+]

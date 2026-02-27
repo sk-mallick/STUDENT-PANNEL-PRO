@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="View your practice performance, subject-wise progress, and achievements — EnglishJibi Classes.">
+    <title>My Profile — EnglishJibi Classes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-dual-glow min-h-screen text-white flex flex-col">
+
+    <!-- ══════════════════════════════════════════════════
+         BRANDING BAR — visible on ALL screen sizes
+    ══════════════════════════════════════════════════ -->
+    <div class="brand-bar w-full flex items-center justify-center py-3 px-4">
+        <p class="text-[22px] leading-none font-black uppercase tracking-tight select-none">
+            <span style="color:#ffffff">ENGLISH</span><span style="color:#cc2200">JIBI</span><span
+                style="color:#ffffff"> CLASSES</span>
+        </p>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         HEADER
+    ══════════════════════════════════════════════════ -->
+    <header class="sticky top-0 z-50 w-full bg-[#0b1120]/95 backdrop-blur-md
+                   border-b border-slate-700/40
+                   shadow-[0_1px_0_rgba(255,255,255,0.03)]" role="banner">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-3
+                    flex items-center justify-between gap-4">
+            <div class="flex items-center gap-3 min-w-0">
+                <a href="index.html" class="shrink-0 w-9 h-9 flex items-center justify-center
+                          bg-slate-900 border border-slate-800 rounded-xl
+                          hover:border-yellow-500/40 hover:bg-slate-800/80
+                          text-slate-400 hover:text-yellow-400 transition-all group" aria-label="Back to dashboard">
+                    <svg class="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </a>
+                <div class="min-w-0">
+                    <div class="text-[10px] text-emerald-500 font-bold tracking-widest uppercase truncate">Dashboard
+                    </div>
+                    <h1 class="text-lg font-black text-white uppercase tracking-tight truncate leading-none mt-0.5">
+                        My Profile
+                    </h1>
+                </div>
+            </div>
+            <!-- Logout button -->
+            <button id="btn-logout"
+                class="btn-ghost text-red-400 hover:text-red-300 hover:bg-red-950/30 hover:border-red-900/50"
+                aria-label="Sign out of your account">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                </svg>
+                <span class="hidden sm:inline">Logout</span>
+            </button>
+        </div>
+        <div class="h-px w-full bg-gradient-to-r from-transparent via-yellow-500/20 to-transparent"></div>
+    </header>
+
+    <!-- ══════════════════════════════════════════════════
+         MAIN CONTENT
+    ══════════════════════════════════════════════════ -->
+    <main class="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-6 sm:py-8">
+
+        <!-- ── Two-Column Layout: Profile Card + Stats ── -->
+        <div class="grid grid-cols-1 lg:grid-cols-[340px_1fr] gap-6 mb-8">
+
+            <!-- ════ LEFT: Profile Summary Card ════ -->
+            <div class="profile-summary-card bg-gradient-to-b from-slate-900 to-slate-950
+                        border border-slate-800/80 rounded-2xl p-6 sm:p-8
+                        shadow-xl shadow-black/20 lg:sticky lg:top-20 lg:self-start">
+
+                <!-- Profile Photo -->
+                <div class="flex justify-center mb-5">
+                    <div class="profile-photo-wrap relative w-24 h-24 sm:w-28 sm:h-28 rounded-full
+                                ring-[3px] ring-yellow-500/30 ring-offset-4 ring-offset-slate-950
+                                overflow-hidden shadow-2xl shadow-yellow-500/10">
+                        <!-- JS will inject <img> or fallback initial here -->
+                        <div id="profile-photo-container" class="w-full h-full rounded-full bg-gradient-to-br from-yellow-500 to-yellow-600
+                                    flex items-center justify-center">
+                            <span id="profile-photo-initial"
+                                class="text-4xl sm:text-5xl font-black text-black leading-none select-none">S</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Name -->
+                <h2 id="profile-name"
+                    class="text-center text-xl sm:text-2xl font-black text-white uppercase tracking-tight leading-tight mb-1">
+                    Student
+                </h2>
+
+                <!-- Info rows -->
+                <div class="space-y-3 mt-5 pt-5 border-t border-slate-800/60">
+                    <div class="flex items-center justify-between">
+                        <span class="text-[10px] text-slate-500 font-black tracking-[.18em] uppercase">School</span>
+                        <span id="profile-school"
+                            class="text-xs text-slate-300 font-semibold text-right max-w-[55%] truncate">—</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-[10px] text-slate-500 font-black tracking-[.18em] uppercase">Class</span>
+                        <span id="profile-class" class="text-xs text-slate-300 font-semibold text-right">—</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-[10px] text-slate-500 font-black tracking-[.18em] uppercase">Student
+                            ID</span>
+                        <span id="profile-id"
+                            class="text-[11px] text-slate-400 font-mono font-medium text-right max-w-[55%] truncate">—</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-[10px] text-slate-500 font-black tracking-[.18em] uppercase">Member
+                            Since</span>
+                        <span id="profile-joined" class="text-xs text-slate-300 font-semibold text-right">—</span>
+                    </div>
+                </div>
+
+                <!-- Status Badge -->
+                <div class="flex justify-center mt-5">
+                    <span id="profile-status" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg
+                               bg-slate-800/60 border border-slate-700/50
+                               text-[10px] text-slate-400 font-black uppercase tracking-[.18em]">
+                        <span
+                            class="w-1.5 h-1.5 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,0.5)]"></span>
+                        Progress Tracking Enabled
+                    </span>
+                </div>
+            </div>
+
+            <!-- ════ RIGHT: Stats + Breakdown ════ -->
+            <div class="space-y-6">
+
+                <!-- Section: Overall Performance -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="w-1.5 h-6 bg-yellow-500 rounded-full"></span>
+                        <h2 class="text-base sm:text-lg font-black text-white tracking-widest uppercase">Overall
+                            Performance</h2>
+                        <div class="flex-1 border-t border-slate-800/60 ml-1"></div>
+                    </div>
+
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                        <div class="stat-card bg-gradient-to-br from-slate-900 to-slate-950
+                                    border border-slate-800/70 rounded-2xl p-4 sm:p-5
+                                    shadow-md shadow-black/10 animate-enter" style="animation-delay:60ms">
+                            <div
+                                class="text-[9px] sm:text-[10px] text-slate-500 font-black tracking-widest uppercase mb-2 sm:mb-3">
+                                Overall Score</div>
+                            <div class="text-2xl sm:text-3xl font-black text-white leading-none" id="perf-score">0%
+                            </div>
+                        </div>
+                        <div class="stat-card bg-gradient-to-br from-slate-900 to-slate-950
+                                    border border-slate-800/70 rounded-2xl p-4 sm:p-5
+                                    shadow-md shadow-black/10 animate-enter" style="animation-delay:120ms">
+                            <div
+                                class="text-[9px] sm:text-[10px] text-slate-500 font-black tracking-widest uppercase mb-2 sm:mb-3">
+                                Sets Completed</div>
+                            <div class="text-2xl sm:text-3xl font-black text-white leading-none" id="perf-sets">0
+                            </div>
+                        </div>
+                        <div class="stat-card bg-gradient-to-br from-slate-900 to-slate-950
+                                    border border-slate-800/70 rounded-2xl p-4 sm:p-5
+                                    shadow-md shadow-black/10 animate-enter" style="animation-delay:180ms">
+                            <div
+                                class="text-[9px] sm:text-[10px] text-slate-500 font-black tracking-widest uppercase mb-2 sm:mb-3">
+                                Best Subject</div>
+                            <div class="text-base sm:text-lg font-black text-yellow-400 uppercase tracking-tight leading-tight"
+                                id="perf-best">None</div>
+                        </div>
+                        <div class="stat-card bg-gradient-to-br from-slate-900 to-slate-950
+                                    border border-slate-800/70 rounded-2xl p-4 sm:p-5
+                                    shadow-md shadow-black/10 animate-enter" style="animation-delay:240ms">
+                            <div
+                                class="text-[9px] sm:text-[10px] text-slate-500 font-black tracking-widest uppercase mb-2 sm:mb-3">
+                                Total Time</div>
+                            <div class="text-xl sm:text-2xl font-black text-white leading-none" id="perf-time">0m
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section: Subject Breakdown -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="w-1.5 h-6 bg-blue-500 rounded-full"></span>
+                        <h2 class="text-base sm:text-lg font-black text-white tracking-widest uppercase">Subject
+                            Breakdown</h2>
+                        <div class="flex-1 border-t border-slate-800/60 ml-1"></div>
+                    </div>
+
+                    <div id="subject-breakdown" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3">
+                        <!-- JS-populated -->
+                        <div
+                            class="col-span-full text-center py-10 bg-slate-900/50 rounded-2xl border border-slate-800/60">
+                            <div
+                                class="inline-block w-6 h-6 border-[3px] border-yellow-500/80 border-t-transparent rounded-full spin mb-3">
+                            </div>
+                            <p class="text-slate-500 font-bold text-[10px] uppercase tracking-widest">Loading
+                                Progress…</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section: Recent Activity -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="w-1.5 h-6 bg-emerald-500 rounded-full"></span>
+                        <h2 class="text-base sm:text-lg font-black text-white tracking-widest uppercase">Recent
+                            Activity</h2>
+                        <div class="flex-1 border-t border-slate-800/60 ml-1"></div>
+                    </div>
+                    <div id="recent-activity" class="space-y-2.5">
+                        <div class="text-center py-8 bg-slate-900/50 rounded-2xl border border-slate-800/60">
+                            <p class="text-slate-600 font-bold text-[10px] uppercase tracking-widest">No recent
+                                activity</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ══════════════════════════════════════════════════
+         FOOTER
+    ══════════════════════════════════════════════════ -->
+    <footer class="site-footer mt-auto">
+        <div class="footer-inner">
+            <p class="footer-brand">© 2026 EnglishJibi Classes</p>
+            <div class="footer-divider"></div>
+            <p class="footer-credit">Website Designed by
+                <span class="footer-credit-name">Subham Kumar Mallick</span>
+            </p>
+        </div>
+    </footer>
+
+    <script type="module" src="js/profile.js"></script>
+</body>
+
+</html>

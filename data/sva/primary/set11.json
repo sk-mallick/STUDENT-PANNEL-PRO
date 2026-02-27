@@ -1,0 +1,17 @@
+[
+    { "q": "Malaria ___ a tropical disease.", "options": ["is", "are"], "answer": 0 },
+    { "q": "The moon ___ a satellite of the earth.", "options": ["is", "are"], "answer": 0 },
+    { "q": "Some furniture ___ to be bought.", "options": ["is", "are"], "answer": 0 },
+    { "q": "Five from ten ___ five.", "options": ["is", "are"], "answer": 0 },
+    { "q": "A bunch of keys ___ lying on the table.", "options": ["is", "are"], "answer": 0 },
+    { "q": "Day after day ___ passed.", "options": ["has", "have"], "answer": 0 },
+    { "q": "Reading and writing ___ two different skills.", "options": ["is", "are"], "answer": 1 },
+    { "q": "The majority of tourists ___ tired.", "options": ["is", "are"], "answer": 1 },
+    { "q": "The Chinese ___ industrious.", "options": ["is", "are"], "answer": 1 },
+    { "q": "One or two pens ___ old.", "options": ["is", "are"], "answer": 1 },
+    { "q": "Ten percent of the chalk ___ useful.", "options": ["was", "were"], "answer": 0 },
+    { "q": "None of those girls ___ attractive.", "options": ["was", "were"], "answer": 1 },
+    { "q": "Heaven ___ us!", "options": ["help", "helps"], "answer": 0 },
+    { "q": "God ___ the king.", "options": ["save", "saves"], "answer": 0 },
+    { "q": "The crown and glory of life ___ character.", "options": ["is", "are"], "answer": 0 }
+]
