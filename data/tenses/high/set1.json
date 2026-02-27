@@ -1,0 +1,202 @@
+[
+    {
+        "q": "Only one of the boys ……………….. not done the home-work given yesterday.",
+        "options": [
+            "have",
+            "had",
+            "can",
+            "could"
+        ],
+        "answer": 1
+    },
+    {
+        "q": "It is time we .......………….. with determination.",
+        "options": [
+            "act",
+            "acted",
+            "have acted",
+            "will act"
+        ],
+        "answer": 1
+    },
+    {
+        "q": "When the thief entered the house, the inmates ................ in the hall.",
+        "options": [
+            "were sleeping",
+            "slept",
+            "were slept",
+            "had been sleeping"
+        ],
+        "answer": 0
+    },
+    {
+        "q": "The thief explained how he ……………………. from the jail.",
+        "options": [
+            "escapes",
+            "had escaped",
+            "escaped",
+            "has escaped"
+        ],
+        "answer": 1
+    },
+    {
+        "q": "They did not know where they …………….… from.",
+        "options": [
+            "come",
+            "had come",
+            "has come",
+            "had came"
+        ],
+        "answer": 1
+    },
+    {
+        "q": "Madhu has not been able to recall where …………………………..",
+        "options": [
+            "does she live",
+            "she lived",
+            "did she live",
+            "lived the girl"
+        ],
+        "answer": 1
+    },
+    {
+        "q": "When he died, Ramanujan ………………………. behind 3 notebooks.",
+        "options": [
+            "was leaving",
+            "had left",
+            "leave",
+            "leaves"
+        ],
+        "answer": 1
+    },
+    {
+        "q": "All the applicants …………… and the results will be announced next week.",
+        "options": [
+            "rank",
+            "are to rank",
+            "are to be ranked",
+            "are ranking"
+        ],
+        "answer": 2
+    },
+    {
+        "q": "Tourists always enjoyed ………………….. the setting Sun in the Darjeeling hills.",
+        "options": [
+            "to watch",
+            "watching",
+            "in seeing",
+            "seeing"
+        ],
+        "answer": 1
+    },
+    {
+        "q": "Ramappa ……………………… as the mayor of the town and he will assume charge this Friday.",
+        "options": [
+            "elects",
+            "has been elected",
+            "is elected",
+            "is electing"
+        ],
+        "answer": 1
+    },
+    {
+        "q": "Just as in a family it is the willing cooperation of its members that ……………… happiness and contentment, so is it in the larger family of the nation.",
+        "options": [
+            "brought",
+            "will bring",
+            "bring",
+            "bought"
+        ],
+        "answer": 1
+    },
+    {
+        "q": "The old man could not remember where he ......... his money.",
+        "options": [
+            "deposits",
+            "is depositing",
+            "had deposited",
+            "will deposit"
+        ],
+        "answer": 2
+    },
+    {
+        "q": "Hamid …………………….. in Mumbai for three years when his parents came to visit.",
+        "options": [
+            "has lived",
+            "had lived",
+            "was living",
+            "had been living"
+        ],
+        "answer": 3
+    },
+    {
+        "q": "Two years have passed since he ………………………. here.",
+        "options": [
+            "has come",
+            "come",
+            "came",
+            "had come"
+        ],
+        "answer": 2
+    },
+    {
+        "q": "Will those of you who have objections to this proposal………. put up your hands, please?",
+        "options": [
+            "discussed",
+            "being discussed",
+            "having discussed",
+            "discussing"
+        ],
+        "answer": 1
+    },
+    {
+        "q": "She had frequent toothaches. So she decided to …………………………",
+        "options": [
+            "remove her teeth",
+            "removing her teeth",
+            "have her teeth removed",
+            "having her teeth removed"
+        ],
+        "answer": 2
+    },
+    {
+        "q": "The mechanic …………………….. the vehicle since this morning.",
+        "options": [
+            "repaired",
+            "repairing",
+            "has been repairing",
+            "will be repairing"
+        ],
+        "answer": 2
+    },
+    {
+        "q": "If I had worked here, I ………………….. very high marks in the examination.",
+        "options": [
+            "scored",
+            "would score",
+            "could score",
+            "would have scored"
+        ],
+        "answer": 3
+    },
+    {
+        "q": "I got used ……………………… on the right when I was in the U.S. for two years.",
+        "options": [
+            "driving",
+            "to drive",
+            "to driving",
+            "by driving"
+        ],
+        "answer": 2
+    },
+    {
+        "q": "Had you told me earlier I …………………….. the meeting.",
+        "options": [
+            "had attended",
+            "have attended",
+            "attended",
+            "would have attended"
+        ],
+        "answer": 3
+    }
+]

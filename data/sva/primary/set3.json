@@ -1,0 +1,17 @@
+[
+    { "q": "The Arabian Nights ______ still a great favourite book.", "options": ["is", "are"], "answer": 0 },
+    { "q": "Mathematics ______ an important subject.", "options": ["is", "are"], "answer": 0 },
+    { "q": "Politics ______ his chief interest.", "options": ["is", "are"], "answer": 0 },
+    { "q": "The committee ______ chosen their chairman.", "options": ["has", "have"], "answer": 1 },
+    { "q": "A hundred kilometres ______ a good distance.", "options": ["is", "are"], "answer": 0 },
+    { "q": "Veena, and not you, ______ won the prize.", "options": ["has", "have"], "answer": 0 },
+    { "q": "Mr. Thakur, as well as his wife and his brother-in-law, ______ hot curry.", "options": ["like", "likes"], "answer": 1 },
+    { "q": "A thousand rupees ______ a big sum.", "options": ["is", "are"], "answer": 0 },
+    { "q": "Each of her rooms ______ to let.", "options": ["is", "are"], "answer": 0 },
+    { "q": "Each day and each hour ______ its duty.", "options": ["bring", "brings"], "answer": 1 },
+    { "q": "The horse and carriage ______ at the door.", "options": ["is", "are"], "answer": 0 },
+    { "q": "My friend and benefactor ______ come to see me.", "options": ["has", "have"], "answer": 0 },
+    { "q": "The house, with its contents, ______ insured against fire.", "options": ["was", "were"], "answer": 0 },
+    { "q": "Everybody ______ happy at the picnic.", "options": ["is", "are"], "answer": 0 },
+    { "q": "______ either of the twins present?", "options": ["was", "were"], "answer": 0 }
+]

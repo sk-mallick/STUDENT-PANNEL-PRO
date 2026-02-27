@@ -1,0 +1,22 @@
+[
+  {"q":"What ________ you _______at the weekend?","options":["does/does","do/does","does/do","do/do"],"answer":3},
+  {"q":"What _____Dick and Tom like _____?","options":["do/doing","doing/doing","do/do","does/doing"],"answer":0},
+  {"q":"Do boys like ___jeans?","options":["wear","wearing","to wear","worn"],"answer":1},
+  {"q":"My classmates _____ on picnic every month.","options":["went","goes","going","go"],"answer":3},
+  {"q":"Mary ______ face every morning.","options":["washes his","wash my","Washes her","washes their"],"answer":2},
+  {"q":"I ___ cigarette, but my teacher _______ smoke.","options":["don't/smokes","smoke/doesn't","smokes/smokes","smoke/don't"],"answer":1},
+  {"q":"They ___ wash _____ car everyday.","options":["don't/my","don't/his","don't/their","don't/our"],"answer":2},
+  {"q":"My parents ________ eat meat.","options":["don't","aren't","doesn't","are"],"answer":0},
+  {"q":"Summer holidays ______ in June.","options":["begins","begin","beginning","began"],"answer":1},
+  {"q":"We _____ tennis on Monday evenings, but my little sister _____ on Sundays.","options":["play/play","plays/plays","play/plays","plays/play"],"answer":2},
+  {"q":"You ____ a lot of things in _______ free time.","options":["do/our","does/your","do/my","do/your"],"answer":3},
+  {"q":"My cat licks _______ tail every morning. But my dogs never lick _____ tails.","options":["its/their","its/its","their/its","*/*"],"answer":0},
+  {"q":"I like _______ football, but my brother doesn’t.","options":["play","played","playing","plays"],"answer":2},
+  {"q":"She likes ________TV. but her husband doesn’t.","options":["watching","to watch","watches","watched"],"answer":0},
+  {"q":"Her sister doesn’t _________eating a hamburger.","options":["like","likes","liking","liked"],"answer":0},
+  {"q":"Do you like_________ in your free time?","options":["read","reads","to read","reading"],"answer":3},
+  {"q":"I like ________ but I________ like swimming.","options":["sailing/don't","sail/doesn't","sail/don't","sail/do"],"answer":0},
+  {"q":"Tom ________ her but she doesn’t like________.","options":["like/her","likes/him","likes/he","like/him"],"answer":1},
+  {"q":"Andrew buys a newspaper everyday. ________reads _________at home.","options":["It/he","Him/it","He/it","His/it"],"answer":2},
+  {"q":"Mike eats cheeseburgers because _________likes________.","options":["he/their","him/they","he/them","him/them"],"answer":2}
+]

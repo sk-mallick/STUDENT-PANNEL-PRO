@@ -1,0 +1,7 @@
+[
+    { "q": "Her wages ___ Rs. a month.", "options": ["is", "are"], "answer": 1 },
+    { "q": "Fifty percent of the amount ___ been paid.", "options": ["has", "have"], "answer": 0 },
+    { "q": "A lot of pens ___ been purchased.", "options": ["has", "have"], "answer": 1 },
+    { "q": "Village after village ___ destroyed.", "options": ["was", "were"], "answer": 0 },
+    { "q": "Words worth’s poetry ___ immortal.", "options": ["is", "are"], "answer": 0 }
+]

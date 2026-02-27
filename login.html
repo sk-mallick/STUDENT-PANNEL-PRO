@@ -240,6 +240,34 @@
             letter-spacing: 0.04em;
         }
 
+        /* ── Loading spinner for auth-btn ─── */
+        .auth-btn.btn-loading {
+            position: relative;
+            color: transparent !important;
+            pointer-events: none;
+        }
+
+        .auth-btn.btn-loading::after {
+            content: '';
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            top: 50%;
+            left: 50%;
+            margin-top: -9px;
+            margin-left: -9px;
+            border: 2.5px solid rgba(0, 0, 0, 0.3);
+            border-top-color: #000;
+            border-radius: 50%;
+            animation: spin 0.6s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
         /* ── Mobile entrance animation ────── */
         @keyframes mobileScaleIn {
             from {
@@ -321,7 +349,6 @@
                 padding-top: 12px;
             }
 
-            /* Tighter mobile branding */
             .lg\:hidden.mb-6 {
                 margin-bottom: 16px;
             }
@@ -386,10 +413,15 @@
                 </div>
             </div>
 
-            <!-- Bottom copyright (desktop) -->
-            <p class="absolute bottom-6 left-12 text-[10px] text-slate-700 font-semibold tracking-wider select-none">
-                © 2026 EnglishJibi Classes
-            </p>
+            <!-- Bottom copyright + attribution (desktop) -->
+            <div class="absolute bottom-6 left-12 right-12 flex items-center justify-between">
+                <p class="text-[10px] text-slate-700 font-semibold tracking-wider select-none">
+                    © 2026 EnglishJibi Classes
+                </p>
+                <p class="text-[9px] text-slate-700/60 font-medium tracking-wide select-none">
+                    Designed & Developed by Subham Kumar Mallick
+                </p>
+            </div>
         </div>
 
         <!-- ═══════ RIGHT: AUTH PANEL ═══════ -->
@@ -488,11 +520,15 @@
                     </div>
                 </div>
 
-                <!-- Bottom text (mobile) -->
-                <p
-                    class="lg:hidden text-center text-[10px] text-slate-700 font-semibold tracking-wider mt-5 select-none">
-                    © 2026 EnglishJibi Classes
-                </p>
+                <!-- Bottom text + attribution (mobile) -->
+                <div class="lg:hidden text-center mt-5 select-none space-y-1">
+                    <p class="text-[10px] text-slate-700 font-semibold tracking-wider">
+                        © 2026 EnglishJibi Classes
+                    </p>
+                    <p class="text-[9px] text-slate-700/50 font-medium tracking-wide">
+                        Designed & Developed by Subham Kumar Mallick
+                    </p>
+                </div>
             </div>
         </div>
 

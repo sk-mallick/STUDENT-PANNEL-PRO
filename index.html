@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Master English grammar through structured practice sets. Track progress, unlock achievements, and access PDF solutions — EnglishJibi Classes.">
+    <title>My Learning — EnglishJibi Classes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-center-glow min-h-screen text-white">
+
+    <!-- ══════════════════════════════════════════════════
+         MOBILE BRANDING BAR — hidden on md+ screens
+         Colours match logo: navy bg · white ENGLISH · red JIBI · white CLASSES
+    ══════════════════════════════════════════════════ -->
+    <div class="brand-bar w-full flex items-center justify-center py-3 px-4">
+        <p class="text-[22px] leading-none font-black uppercase tracking-tight select-none">
+            <span style="color:#ffffff">ENGLISH</span><span style="color:#cc2200">JIBI</span><span
+                style="color:#ffffff"> CLASSES</span>
+        </p>
+    </div>
+
+    <!-- HERO SECTION — full width -->
+    <div class="w-full px-5 md:px-10 xl:px-16 pt-8">
+
+        <div class="flex flex-col lg:flex-row lg:items-start justify-between gap-6 mb-6">
+
+            <!-- Title block -->
+            <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border
+                                border-emerald-900/50 bg-emerald-950/30 shadow-sm">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"></span>
+                        <span class="text-[10px] font-black tracking-[.22em] text-emerald-400 uppercase">Student
+                            Portal</span>
+                    </div>
+                    <!-- Profile link -->
+                    <a href="profile.html" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border
+                              border-slate-800 bg-slate-900 hover:border-yellow-500/40
+                              hover:bg-slate-800/80 transition-all duration-200 group"
+                        aria-label="View your student profile and statistics" title="My Profile">
+                        <svg class="w-4 h-4 text-slate-400 group-hover:text-yellow-400 transition-colors" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                        </svg>
+                        <span
+                            class="text-[10px] font-black tracking-[.18em] text-slate-400
+                                     group-hover:text-yellow-400 uppercase transition-colors hidden sm:inline">Profile</span>
+                    </a>
+                </div>
+                <h1 class="text-4xl md:text-5xl xl:text-6xl font-black tracking-tight leading-none uppercase mb-3">
+                    My <span class="text-yellow-400">Learning</span>
+                </h1>
+                <p class="text-slate-400 text-sm md:text-base font-medium max-w-lg leading-relaxed">
+                    Master English grammar through structured practice sets.
+                    Track progress, unlock achievements, and access PDF solutions.
+                </p>
+            </div>
+
+            <!-- 4 stat cards -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 flex-none lg:w-auto w-full" role="region"
+                aria-label="Performance statistics">
+
+                <div
+                    class="bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800/70 rounded-2xl p-5 flex flex-col justify-between shadow-sm overflow-hidden">
+                    <div class="text-[10px] text-slate-500 font-black tracking-widest uppercase mb-3 truncate">Avg Score
+                    </div>
+                    <div id="stat-score" class="text-3xl font-black text-white leading-none truncate">0%</div>
+                </div>
+
+                <div
+                    class="bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800/70 rounded-2xl p-5 flex flex-col justify-between shadow-sm overflow-hidden">
+                    <div class="text-[10px] text-slate-500 font-black tracking-widest uppercase mb-3 truncate">Sets
+                        Completed</div>
+                    <div id="stat-sets"
+                        class="text-3xl font-black text-white leading-none min-w-0 flex items-baseline gap-0 flex-wrap">
+                        0<span class="text-base font-bold text-slate-600 ml-1">/ –</span>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800/70 rounded-2xl p-5 flex flex-col justify-between shadow-sm overflow-hidden">
+                    <div class="text-[10px] text-slate-500 font-black tracking-widest uppercase mb-3 truncate">Active
+                        Subjects</div>
+                    <div id="stat-subjects"
+                        class="text-3xl font-black text-white leading-none min-w-0 flex items-baseline gap-0 flex-wrap">
+                        0<span class="text-base font-bold text-slate-600 ml-1">/ –</span>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800/70 rounded-2xl p-5 flex flex-col justify-between shadow-sm relative overflow-hidden group">
+                    <div
+                        class="absolute -right-3 -bottom-3 text-slate-800/50 group-hover:text-yellow-900/20 transition-colors">
+                        <svg class="w-20 h-20" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                        </svg>
+                    </div>
+                    <div class="text-[10px] text-slate-500 font-black tracking-widest uppercase mb-3 relative z-10">Top
+                        Subject</div>
+                    <div id="stat-best"
+                        class="text-base font-black text-yellow-400 uppercase tracking-tight leading-tight truncate relative z-10">
+                        None</div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="border-b border-slate-800/70 mb-7"></div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="w-full px-5 md:px-10 xl:px-16 pb-24">
+
+        <!-- Quick Resume -->
+        <div id="resume-wrap" class="mb-8 hidden" aria-live="polite" role="region" aria-label="Resume practicing"></div>
+
+        <!-- Curriculum heading -->
+        <div class="flex items-center gap-3 mb-5">
+            <span class="w-1.5 h-6 bg-blue-500 rounded-full"></span>
+            <h2 class="text-xl font-black text-white tracking-widest uppercase">Curriculum</h2>
+            <div class="flex-1 border-t border-slate-800/60 ml-2"></div>
+        </div>
+
+        <!-- Subject Grid -->
+        <div id="subject-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5" role="region"
+            aria-label="Available subjects">
+            <div class="col-span-full text-center py-20 bg-slate-900/60 rounded-2xl border border-slate-800">
+                <div
+                    class="inline-block w-7 h-7 border-4 border-yellow-500/80 border-t-transparent rounded-full spin mb-4">
+                </div>
+                <p class="text-slate-500 font-bold text-xs uppercase tracking-widest">Loading Curriculum...</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         FOOTER
+    ══════════════════════════════════════════════════ -->
+    <footer class="site-footer mt-8">
+        <div class="footer-inner">
+            <p class="footer-brand">© 2026 EnglishJibi Classes</p>
+            <div class="footer-divider"></div>
+            <p class="footer-credit">Website Designed by
+                <span class="footer-credit-name">Subham Kumar Mallick</span>
+            </p>
+        </div>
+    </footer>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+
+</html>

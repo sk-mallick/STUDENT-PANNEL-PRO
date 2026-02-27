@@ -1,0 +1,17 @@
+[
+    { "q": "A black and red cow ______ grazing in the field.", "options": ["was", "were"], "answer": 0 },
+    { "q": "________ he or they to blame?", "options": ["is", "are"], "answer": 1 },
+    { "q": "There ______ a man and a woman there.", "options": ["is", "are"], "answer": 1 },
+    { "q": "The girl who is watching T.V. ______ my sister.", "options": ["is", "are"], "answer": 0 },
+    { "q": "It ______ we who are to blame.", "options": ["is", "are"], "answer": 1 },
+    { "q": "I wish I ______ a rich man.", "options": ["was", "were"], "answer": 1 },
+    { "q": "He does not ______ to do it.", "options": ["need", "needs"], "answer": 0 },
+    { "q": "Time and tide ______ for no man.", "options": ["wait", "waits"], "answer": 0 },
+    { "q": "She ______ not do this.", "options": ["need", "needs"], "answer": 0 },
+    { "q": "All that glitters ______ not gold.", "options": ["is", "are"], "answer": 0 },
+    { "q": "The Himalayas ______ many peaks.", "options": ["has", "have"], "answer": 1 },
+    { "q": "I wish he ______ the Chief Minister of Bihar.", "options": ["was", "were"], "answer": 1 },
+    { "q": "It is I who ___ done this.", "options": ["has", "have"], "answer": 1 },
+    { "q": "Ajay is one of those persons who ___ not accept bribes.", "options": ["do", "does"], "answer": 0 },
+    { "q": "We should not ___ beaten our brother.", "options": ["have", "has"], "answer": 0 }
+]

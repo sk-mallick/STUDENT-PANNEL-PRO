@@ -1,0 +1,17 @@
+[
+    { "q": "Nothing but trees ______ visible.", "options": ["is", "are"], "answer": 0 },
+    { "q": "Not only the principal but also the teachers ______ responsible.", "options": ["is", "are"], "answer": 1 },
+    { "q": "A criminal with all his followers ______ arrested.", "options": ["was", "were"], "answer": 0 },
+    { "q": "A herd of cows ______ grazing in the field. ", "options": ["is", "are"], "answer": 0 },
+    { "q": "More than one ______ available there.", "options": ["was", "were"], "answer": 0 },
+    { "q": "More girls than one ______ present in the class.", "options": ["was", "were"], "answer": 1 },
+    { "q": "Every boy and every girl ______ a prize.", "options": ["has", "have"], "answer": 0 },
+    { "q": "The Jury ______ divided in its opinion.", "options": ["was", "were"], "answer": 0 },
+    { "q": "Truth and honesty ______ the best policy.", "options": ["is", "are"], "answer": 0 },
+    { "q": "Six times two ______ twelve.", "options": ["is", "are"], "answer": 0 },
+    { "q": "Milk and honey ______ costly things.", "options": ["is", "are"], "answer": 1 },
+    { "q": "The poet and the philosopher ______ said so.", "options": ["has", "have"], "answer": 1 },
+    { "q": "Rice and fish ______ my favourite dish.", "options": ["is", "are"], "answer": 0 },
+    { "q": "Neither you nor he ______ honest.", "options": ["is", "are"], "answer": 0 },
+    { "q": "Either he or I ______ guilty.", "options": ["am", "is"], "answer": 0 }
+]

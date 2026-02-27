@@ -1,0 +1,22 @@
+[
+  {"q":"My brother's birthday is _________March.","options":["in","on","at","to"],"answer":0},
+  {"q":"The train leaves Paris_________4 p.m.","options":["in","at","on","to"],"answer":1},
+  {"q":"Vancouver is very cold_________ winter.","options":["at","in","on","to"],"answer":1},
+  {"q":"She never ________meat.","options":["eats","eating","eat","to eat"],"answer":0},
+  {"q":"A: I'm sorry, I'm late. B:________Come and sit down.","options":["Excuse me!","Don't worry!","What's the matter?","Why are you late?"],"answer":1},
+  {"q":"A-_______your wife ________English? B-Yes, she does.","options":["Do/speak","Does/speaking","Does/speak","Do/speaking"],"answer":2},
+  {"q":"How many languages ________you_________? Three: English, German and Spanish.","options":["does/speak","do/speak","do/speaking","does/speaking"],"answer":1},
+  {"q":"Why ________you like________ in the hotel?","options":["do/working","do/work","does/working","does/work"],"answer":0},
+  {"q":"They never go out __________Friday evenings.","options":["on","in","at","by"],"answer":0},
+  {"q":"She loves __________to music.","options":["listening","to listen","listens","listen"],"answer":0},
+  {"q":"They often eat in a restaurant __________Tuesdays.","options":["on","In","of","at"],"answer":0},
+  {"q":"_________summer I play tennis ___________Sundays.","options":["In/in","At/on","In/on","At/in"],"answer":2},
+  {"q":"Do Mr. Adams and his daughter like going_________? No, they _______.","options":["ski/don't","skiing/don't","skiing/do","ski/does"],"answer":1},
+  {"q":"_______they ________a winter holiday? Yes, they do.","options":["Do/wanting","Does/want","Do/want","Does/wanting"],"answer":2},
+  {"q":"What time_________ you go to bed?","options":["do","does","is","have"],"answer":0},
+  {"q":"____________do you do your homework? After dinner.","options":["Where","What","How","When"],"answer":3},
+  {"q":"__________you go out on Friday evening? Yes, I do sometimes.","options":["Do","Where","Are","Does"],"answer":0},
+  {"q":"__________do you like your job? Because it's Interesting.","options":["Why","What","How","Where"],"answer":0},
+  {"q":"__________do you travel to school? By bus.","options":["How","What","Why","Where"],"answer":0},
+  {"q":"___________ ____________you live with? With my mother and sister.","options":["What/do","Who/do","Where/does","Who/does"],"answer":1}
+]

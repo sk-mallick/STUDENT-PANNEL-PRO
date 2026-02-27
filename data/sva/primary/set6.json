@@ -1,0 +1,17 @@
+[
+    { "q": "A pair of trousers ______ been sewed.", "options": ["has", "have"], "answer": 0 },
+    { "q": "The people of my village ______ laborious.", "options": ["is", "are"], "answer": 1 },
+    { "q": "A number of students ______ come.", "options": ["has", "have"], "answer": 1 },
+    { "q": "The number of students ______ fifty.", "options": ["is", "are"], "answer": 0 },
+    { "q": "Forty miles ______ a long distance.", "options": ["is", "are"], "answer": 0 },
+    { "q": "The percentage of success ______ very high.", "options": ["is", "are"], "answer": 0 },
+    { "q": "Measles ______ a dangerous disease.", "options": ["is", "are"], "answer": 0 },
+    { "q": "The poor ______ laborious.", "options": ["is", "are"], "answer": 1 },
+    { "q": "Many a criminal ______ been arrested.", "options": ["has", "have"], "answer": 0 },
+    { "q": "None of the students ______ come.", "options": ["has", "have"], "answer": 0 },
+    { "q": "A few teachers ______ laborious.", "options": ["is", "are"], "answer": 1 },
+    { "q": "One of them ______ a robber.", "options": ["is", "are"], "answer": 0 },
+    { "q": "Each and every pen ______ red.", "options": ["is", "are"], "answer": 0 },
+    { "q": "Each girl ______ an instrument box.", "options": ["has", "have"], "answer": 0 },
+    { "q": "Everyone of us ______ a traitor.", "options": ["is", "are"], "answer": 0 }
+]

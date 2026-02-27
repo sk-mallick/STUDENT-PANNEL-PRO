@@ -1,0 +1,17 @@
+[
+    { "q": "Some people ___ travelling.", "options": ["is", "are"], "answer": 1 },
+    { "q": "A parcel of books ___ been received.", "options": ["has", "have"], "answer": 0 },
+    { "q": "The rest of the book ___ not finished.", "options": ["is", "are"], "answer": 0 },
+    { "q": "The students of Bihar ___ laborious.", "options": ["is", "are"], "answer": 1 },
+    { "q": "The Magistrate and Collector ___ present in the meeting.", "options": ["is", "are"], "answer": 0 },
+    { "q": "Oil and water ___ not mix.", "options": ["does", "do"], "answer": 1 },
+    { "q": "Hammer and sickle ___ a symbol.", "options": ["is", "are"], "answer": 0 },
+    { "q": "The United States ___ a big army.", "options": ["has", "have"], "answer": 0 },
+    { "q": "Gulliver's Travels ___ a famous satire.", "options": ["is", "are"], "answer": 0 },
+    { "q": "Both of them ___ good.", "options": ["is", "are"], "answer": 1 },
+    { "q": "All ___ mortal.", "options": ["is", "are"], "answer": 1 },
+    { "q": "Mr. and Mrs. Thakur ___ in the house.", "options": ["is", "are"], "answer": 1 },
+    { "q": "What ___ the latest news?", "options": ["is", "are"], "answer": 0 },
+    { "q": "Half of the milk ___ been spoiled.", "options": ["has", "have"], "answer": 0 },
+    { "q": "Tendulkar is one of the players who ___ been selected for the test.", "options": ["has", "have"], "answer": 1 }
+]

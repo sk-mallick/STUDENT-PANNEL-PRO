@@ -1,0 +1,17 @@
+[
+    { "q": "The jury ______ divided in their opinions.", "options": ["was", "were"], "answer": 1 },
+    { "q": "This is the only one of his stories that ______ worth reading.", "options": ["is", "are"], "answer": 0 },
+    { "q": "Two third of the town ______ in ruins.", "options": ["is", "are"], "answer": 0 },
+    { "q": "The long and the short of the matter ______ this.", "options": ["is", "are"], "answer": 0 },
+    { "q": "A list of weak boys in our school ______ published.", "options": ["has", "have"], "answer": 0 },
+    { "q": "Three parts of the business ______ in my hands.", "options": ["is", "are"], "answer": 1 },
+    { "q": "Every inch of the field ______ searched.", "options": ["was", "were"], "answer": 0 },
+    { "q": "None of the thieves ______ been arrested.", "options": ["has", "have"], "answer": 1 },
+    { "q": "Anybody ______ welcomed.", "options": ["is", "are"], "answer": 0 },
+    { "q": "Rain ______ from the sky.", "options": ["fall", "falls"], "answer": 1 },
+    { "q": "The sun ______ in the west.", "options": ["set", "sets"], "answer": 1 },
+    { "q": "There ______ an egg on the plate.", "options": ["is", "are"], "answer": 0 },
+    { "q": "Binay and Mukesh ______ clever boys.", "options": ["is", "are"], "answer": 1 },
+    { "q": "Manoj, the tallest of all the students in our class, ______ clever.", "options": ["is", "are"], "answer": 0 },
+    { "q": "______ these children's mother ill?", "options": ["is", "are"], "answer": 0 }
+]

@@ -1,0 +1,17 @@
+[
+    { "q": "No news ______ good news.", "options": ["is", "are"], "answer": 0 },
+    { "q": "The great poet and dramatist ______ dead.", "options": ["is", "are"], "answer": 0 },
+    { "q": "The orator and statesman ______ dead.", "options": ["is", "are"], "answer": 0 },
+    { "q": "Neither of the films ______ good.", "options": ["was", "were"], "answer": 0 },
+    { "q": "The king, with all his ministers, ______ present there.", "options": ["was", "were"], "answer": 0 },
+    { "q": "Every man, woman, and child in the village ______ wounded.", "options": ["was", "were"], "answer": 0 },
+    { "q": "Rice and curry ______ his favourite food.", "options": ["is", "are"], "answer": 0 },
+    { "q": "He is one of the greatest leaders that ever ______.", "options": ["has", "have"], "answer": 1 },
+    { "q": "A number of students ______ caught copying.", "options": ["was", "were"], "answer": 1 },
+    { "q": "The boy and the girl ______ to the same college.", "options": ["go", "goes"], "answer": 0 },
+    { "q": "The orator and the statesman ______ arrived.", "options": ["has", "have"], "answer": 1 },
+    { "q": "Many of the students ______ failed in the examination.", "options": ["has", "have"], "answer": 1 },
+    { "q": "Most of the students ______ their time.", "options": ["waste", "wastes"], "answer": 0 },
+    { "q": "A large number of workers ______ struck work.", "options": ["has", "have"], "answer": 1 },
+    { "q": "He and his friend ______ arrived.", "options": ["has", "have"], "answer": 1 }
+]   

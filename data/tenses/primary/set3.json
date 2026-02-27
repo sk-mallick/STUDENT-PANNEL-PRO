@@ -1,0 +1,22 @@
+[
+  {"q":"A: ________languages do they speak? B: Just one.","options":["What","How many","How","Which"],"answer":1},
+  {"q":"A: Do you _________ Afghani? B: No.","options":["speak/You don't","speak/I don't","speak/don't I","speaks/don't speak"],"answer":1},
+  {"q":"A: _________does Margaret start work? B: At 7 in the morning","options":["What time","What kind","What sort","What about"],"answer":0},
+  {"q":"A: ________do your brothers like working in this factory? B: Because they earn much money.","options":["What","When","Why","Whom"],"answer":2},
+  {"q":"________he likes his job?","options":["Does","Do","Is","Are"],"answer":0},
+  {"q":"I________ an accountant.","options":["do","does","am","is"],"answer":2},
+  {"q":"__________New York exciting?","options":["Are","Do","Does","Is"],"answer":3},
+  {"q":"Where __________they live?","options":["are","do","does","is"],"answer":1},
+  {"q":"Why__________ you want to learn English?","options":["do","are","...","is"],"answer":0},
+  {"q":"We _________Algerians.","options":["does","are","do","am"],"answer":1},
+  {"q":"What ___________he do at weekends?","options":["do","is","does","are"],"answer":2},
+  {"q":"He plays football _________Friday mornings.","options":["in","on","at","of"],"answer":1},
+  {"q":"Do you relax _________weekends?","options":["at","on","in","by"],"answer":0},
+  {"q":"Where _________do you go_______ holiday?","options":["at","in","of","on"],"answer":3},
+  {"q":"I like________.","options":["cooks","cooking","cook","cooked"],"answer":1},
+  {"q":"She gets up early ________the morning.","options":["on","in","at","by"],"answer":1},
+  {"q":"She gets up early ________the weekdays.","options":["at","of","on","in"],"answer":2},
+  {"q":"He takes photos only __________spring.","options":["in","at","on","by"],"answer":0},
+  {"q":"He hates _________football __________television.","options":["watching/on","to watch/in","watch/on","watching/in"],"answer":0},
+  {"q":"They like _________very much.","options":["sail","sailed","sailing","sail"],"answer":2}
+]

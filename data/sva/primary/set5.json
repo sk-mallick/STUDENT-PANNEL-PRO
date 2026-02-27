@@ -1,0 +1,17 @@
+[
+    { "q": "A year ______ twelve months.", "options": ["has", "have"], "answer": 0 },
+    { "q": "The little girl _______ walking down the street carrying her doll.", "options": ["is", "are"], "answer": 0 },
+    { "q": "You, he, and I ______ friends.", "options": ["am", "are"], "answer": 1 },
+    { "q": "The wages of sin ______ death.", "options": ["is", "are"], "answer": 0 },
+    { "q": "The police ______ caught the robber.", "options": ["has", "have"], "answer": 1 },
+    { "q": "All the furniture ______ costly.", "options": ["is", "are"], "answer": 0 },
+    { "q": "A band of musicians ______ to arrive.", "options": ["is", "are"], "answer": 0 },
+    { "q": "A lot of money ______ been spent.", "options": ["has", "have"], "answer": 0 },
+    { "q": "Ship after ship ______ sailing by.", "options": ["was", "were"], "answer": 0 },
+    { "q": "The colour of these flowers ______ charming.", "options": ["is", "are"], "answer": 0 },
+    { "q": "The water of these rivers ______ not fresh.", "options": ["is", "are"], "answer": 0 },
+    { "q": "A team of players ______ arrived.", "options": ["has", "have"], "answer": 0 },
+    { "q": "Half of the mango ______ rotten.", "options": ["was", "were"], "answer": 0 },
+    { "q": "Half of the mangoes ______ rotten.", "options": ["was", "were"], "answer": 1 },
+    { "q": "Your trousers ______ new.", "options": ["is", "are"], "answer": 1 }
+]

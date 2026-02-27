@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend Setup Guide — EnglishJibi Classes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg: #020617;
+            --surface: #0f172a;
+            --surface-2: #131c31;
+            --border: rgba(51, 65, 85, 0.5);
+            --border-hover: rgba(71, 85, 105, 0.6);
+            --text: #f8fafc;
+            --text-sec: #94a3b8;
+            --text-muted: #64748b;
+            --yellow: #eab308;
+            --emerald: #10b981;
+            --red: #ef4444;
+            --blue: #3b82f6;
+            --radius: 14px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            padding: 24px 16px 80px;
+            background-image:
+                radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.12) 0%, transparent 50%);
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .guide-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 32px 24px;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(2, 6, 23, 0.98));
+            border: 1px solid var(--border);
+            border-radius: 22px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .guide-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--yellow), var(--emerald));
+            opacity: 0.7;
+        }
+
+        .guide-header .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 14px;
+            border-radius: 8px;
+            border: 1px solid rgba(234, 179, 8, 0.25);
+            background: rgba(234, 179, 8, 0.08);
+            margin-bottom: 16px;
+        }
+
+        .guide-header .badge-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--yellow);
+            box-shadow: 0 0 8px rgba(234, 179, 8, 0.6);
+        }
+
+        .guide-header .badge-text {
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--yellow);
+        }
+
+        .guide-header h1 {
+            font-size: 28px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            margin-bottom: 10px;
+        }
+
+        .guide-header h1 span {
+            color: var(--yellow);
+        }
+
+        .guide-header p {
+            font-size: 13px;
+            color: var(--text-sec);
+            font-weight: 500;
+            max-width: 480px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Progress bar */
+        .progress-section {
+            margin-bottom: 32px;
+            padding: 16px 20px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+        }
+
+        .progress-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .progress-label {
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .progress-count {
+            font-size: 13px;
+            font-weight: 800;
+            color: var(--text);
+        }
+
+        .progress-count span {
+            color: var(--text-muted);
+        }
+
+        .progress-track {
+            height: 6px;
+            background: rgba(30, 41, 59, 0.8);
+            border-radius: 999px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--yellow), var(--emerald));
+            transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            width: 0%;
+        }
+
+        /* Step card */
+        .step-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            margin-bottom: 16px;
+            overflow: hidden;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .step-card.completed {
+            border-color: rgba(16, 185, 129, 0.2);
+        }
+
+        .step-card.completed .step-header {
+            opacity: 0.7;
+        }
+
+        .step-card.completed .step-number {
+            background: rgba(16, 185, 129, 0.15);
+            border-color: rgba(16, 185, 129, 0.3);
+            color: var(--emerald);
+        }
+
+        .step-card.completed .step-title {
+            text-decoration: line-through;
+            text-decoration-color: rgba(148, 163, 184, 0.3);
+        }
+
+        .step-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 18px 20px;
+            cursor: pointer;
+            user-select: none;
+            transition: background 0.15s ease;
+        }
+
+        .step-header:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        /* Custom checkbox */
+        .step-check {
+            position: relative;
+            width: 22px;
+            height: 22px;
+            flex-shrink: 0;
+        }
+
+        .step-check input {
+            opacity: 0;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            z-index: 2;
+            margin: 0;
+        }
+
+        .step-check .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 22px;
+            height: 22px;
+            border: 2px solid var(--border-hover);
+            border-radius: 6px;
+            background: transparent;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .step-check .checkmark svg {
+            width: 12px;
+            height: 12px;
+            opacity: 0;
+            transform: scale(0.5);
+            transition: all 0.2s ease;
+            color: #000;
+        }
+
+        .step-check input:checked+.checkmark {
+            background: var(--emerald);
+            border-color: var(--emerald);
+            box-shadow: 0 0 12px rgba(16, 185, 129, 0.3);
+        }
+
+        .step-check input:checked+.checkmark svg {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .step-number {
+            width: 32px;
+            height: 32px;
+            border-radius: 10px;
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 800;
+            color: var(--text-sec);
+            flex-shrink: 0;
+            transition: all 0.2s ease;
+        }
+
+        .step-title {
+            font-size: 14px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--text);
+            flex: 1;
+            transition: all 0.2s ease;
+        }
+
+        .step-toggle {
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .step-card.open .step-toggle {
+            transform: rotate(180deg);
+        }
+
+        /* Step body */
+        .step-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .step-card.open .step-body {
+            max-height: 2000px;
+        }
+
+        .step-content {
+            padding: 0 20px 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        .step-content p {
+            font-size: 13px;
+            color: var(--text-sec);
+            line-height: 1.7;
+            margin: 14px 0;
+            font-weight: 500;
+        }
+
+        .step-content strong {
+            color: var(--text);
+            font-weight: 700;
+        }
+
+        .step-content em {
+            color: var(--yellow);
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        /* Sub-steps */
+        .sub-steps {
+            list-style: none;
+            padding: 0;
+            margin: 12px 0;
+        }
+
+        .sub-steps li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 8px 0;
+            font-size: 13px;
+            color: var(--text-sec);
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        .sub-steps li .num {
+            width: 22px;
+            height: 22px;
+            border-radius: 6px;
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: 800;
+            color: var(--text-muted);
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        /* Code block */
+        .code-block {
+            background: #0a0e1a;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 14px 16px;
+            margin: 12px 0;
+            overflow-x: auto;
+            position: relative;
+        }
+
+        .code-block pre {
+            font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+            font-size: 12px;
+            line-height: 1.7;
+            color: #e2e8f0;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+
+        .code-block .code-label {
+            position: absolute;
+            top: 8px;
+            right: 10px;
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            background: rgba(15, 23, 42, 0.9);
+            padding: 2px 8px;
+            border-radius: 4px;
+            border: 1px solid var(--border);
+        }
+
+        .code-block .copy-btn {
+            position: absolute;
+            bottom: 8px;
+            right: 10px;
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid var(--border);
+            padding: 4px 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+
+        .code-block .copy-btn:hover {
+            color: var(--text);
+            border-color: var(--border-hover);
+            background: rgba(30, 41, 59, 1);
+        }
+
+        .code-block .copy-btn.copied {
+            color: var(--emerald);
+            border-color: rgba(16, 185, 129, 0.3);
+        }
+
+        /* Table */
+        .schema-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 12px 0;
+            font-size: 12px;
+        }
+
+        .schema-table th {
+            background: rgba(30, 41, 59, 0.6);
+            color: var(--text-sec);
+            font-weight: 800;
+            font-size: 10px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 8px 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .schema-table td {
+            padding: 7px 12px;
+            border-bottom: 1px solid rgba(30, 41, 59, 0.4);
+            color: var(--text-sec);
+            font-weight: 500;
+            font-family: 'JetBrains Mono', 'Consolas', monospace;
+            font-size: 11px;
+        }
+
+        .schema-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Warning box */
+        .warning-box {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 12px 16px;
+            background: rgba(234, 179, 8, 0.06);
+            border: 1px solid rgba(234, 179, 8, 0.15);
+            border-radius: 10px;
+            margin: 12px 0;
+        }
+
+        .warning-box .icon {
+            font-size: 16px;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .warning-box p {
+            font-size: 12px !important;
+            color: #fbbf24 !important;
+            margin: 0 !important;
+            line-height: 1.6 !important;
+        }
+
+        /* Completion banner */
+        .completion-banner {
+            display: none;
+            text-align: center;
+            padding: 32px 24px;
+            background: linear-gradient(135deg, rgba(5, 150, 105, 0.08), rgba(16, 185, 129, 0.04));
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            border-radius: var(--radius);
+            margin-top: 24px;
+        }
+
+        .completion-banner.show {
+            display: block;
+            animation: scaleIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .completion-banner h2 {
+            font-size: 22px;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--emerald);
+            margin-bottom: 8px;
+        }
+
+        .completion-banner p {
+            font-size: 13px;
+            color: var(--text-sec);
+            font-weight: 500;
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Link */
+        a {
+            color: var(--blue);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Tag highlight */
+        .tag {
+            display: inline;
+            padding: 2px 7px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 700;
+            font-family: 'JetBrains Mono', 'Consolas', monospace;
+        }
+
+        .tag-yellow {
+            background: rgba(234, 179, 8, 0.1);
+            color: #fbbf24;
+            border: 1px solid rgba(234, 179, 8, 0.2);
+        }
+
+        .tag-blue {
+            background: rgba(59, 130, 246, 0.1);
+            color: #60a5fa;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        .tag-emerald {
+            background: rgba(16, 185, 129, 0.1);
+            color: #34d399;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Header -->
+        <div class="guide-header">
+            <div class="badge">
+                <div class="badge-dot"></div>
+                <span class="badge-text">Setup Guide</span>
+            </div>
+            <h1>Backend <span>Deployment</span> Checklist</h1>
+            <p>Follow each step to connect your Student Panel to Google Sheets. Check off each step as you complete
+                it.</p>
+        </div>
+
+        <!-- Progress -->
+        <div class="progress-section">
+            <div class="progress-header">
+                <span class="progress-label">Overall Progress</span>
+                <span class="progress-count" id="progress-text">0 <span>/ 7 Steps</span></span>
+            </div>
+            <div class="progress-track">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+        </div>
+
+        <!-- ═══════════════ STEPS ═══════════════ -->
+
+        <!-- Step 1 -->
+        <div class="step-card open" data-step="1">
+            <div class="step-header" onclick="toggleStep(this)">
+                <label class="step-check" onclick="event.stopPropagation()">
+                    <input type="checkbox" onchange="updateProgress()">
+                    <div class="checkmark">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                </label>
+                <div class="step-number">01</div>
+                <div class="step-title">Open Your Google Sheet</div>
+                <div class="step-toggle">
+                    <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+            </div>
+            <div class="step-body">
+                <div class="step-content">
+                    <p>Open your Google Sheet in a browser. This is where all student data, results, and login
+                        information will be stored.</p>
+                    <ol class="sub-steps">
+                        <li>
+                            <span class="num">1</span>
+                            <span>Open your browser (Chrome recommended)</span>
+                        </li>
+                        <li>
+                            <span class="num">2</span>
+                            <span>Go to: <a
+                                    href="https://docs.google.com/spreadsheets/d/1PcgVZrGEwjuJa0lhnptAtI-e1_33jZ97Gpwt-3OFC0Y/edit"
+                                    target="_blank">Your Google Sheet ↗</a></span>
+                        </li>
+                        <li>
+                            <span class="num">3</span>
+                            <span>Make sure you're signed into the Google account that <strong>owns</strong> this
+                                sheet</span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-card" data-step="2">
+            <div class="step-header" onclick="toggleStep(this)">
+                <label class="step-check" onclick="event.stopPropagation()">
+                    <input type="checkbox" onchange="updateProgress()">
+                    <div class="checkmark">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                </label>
+                <div class="step-number">02</div>
+                <div class="step-title">Create "REGISTRATION" Tab</div>
+                <div class="step-toggle">
+                    <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+            </div>
+            <div class="step-body">
+                <div class="step-content">
+                    <p>This sheet stores all student accounts — login credentials, approval status, and roles.</p>
+                    <ol class="sub-steps">
+                        <li>
+                            <span class="num">1</span>
+                            <span>At the <strong>bottom of Google Sheets</strong>, click the <em>+</em> button to create
+                                a new tab</span>
+                        </li>
+                        <li>
+                            <span class="num">2</span>
+                            <span>Double-click the new tab name and rename it to exactly: <span
+                                    class="tag tag-yellow">REGISTRATION</span></span>
+                        </li>
+                        <li>
+                            <span class="num">3</span>
+                            <span>In <strong>Row 1</strong>, type these column headers (one per cell, A1 through
+                                I1):</span>
+                        </li>
+                    </ol>
+                    <table class="schema-table">
+                        <tr>
+                            <th>A1</th>
+                            <th>B1</th>
+                            <th>C1</th>
+                            <th>D1</th>
+                            <th>E1</th>
+                            <th>F1</th>
+                            <th>G1</th>
+                            <th>H1</th>
+                            <th>I1</th>
+                        </tr>
+                        <tr>
+                            <td>studentId</td>
+                            <td>studentName</td>
+                            <td>email</td>
+                            <td>passwordHash</td>
+                            <td>salt</td>
+                            <td>status</td>
+                            <td>role</td>
+                            <td>createdAt</td>
+                            <td>lastLogin</td>
+                        </tr>
+                    </table>
+                    <div class="warning-box">
+                        <span class="icon">⚠️</span>
+                        <p><strong>Important:</strong> Do NOT manually fill data rows. The script will hash passwords
+                            and fill rows automatically. Only type the headers in Row 1.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-card" data-step="3">
+            <div class="step-header" onclick="toggleStep(this)">
+                <label class="step-check" onclick="event.stopPropagation()">
+                    <input type="checkbox" onchange="updateProgress()">
+                    <div class="checkmark">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                </label>
+                <div class="step-number">03</div>
+                <div class="step-title">Create "RESULTS" Tab</div>
+                <div class="step-toggle">
+                    <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+            </div>
+            <div class="step-body">
+                <div class="step-content">
+                    <p>This sheet stores all practice set results — scores, timestamps, and performance data for every
+                        student.</p>
+                    <ol class="sub-steps">
+                        <li>
+                            <span class="num">1</span>
+                            <span>Click the <em>+</em> button again to create another new tab</span>
+                        </li>
+                        <li>
+                            <span class="num">2</span>
+                            <span>Rename it to exactly: <span class="tag tag-blue">RESULTS</span></span>
+                        </li>
+                        <li>
+                            <span class="num">3</span>
+                            <span>In <strong>Row 1</strong>, type these column headers (A1 through K1):</span>
+                        </li>
+                    </ol>
+                    <table class="schema-table">
+                        <tr>
+                            <th>A1</th>
+                            <th>B1</th>
+                            <th>C1</th>
+                            <th>D1</th>
+                            <th>E1</th>
+                            <th>F1</th>
+                            <th>G1</th>
+                            <th>H1</th>
+                            <th>I1</th>
+                            <th>J1</th>
+                            <th>K1</th>
+                        </tr>
+                        <tr>
+                            <td>studentId</td>
+                            <td>studentName</td>
+                            <td>subject</td>
+                            <td>level</td>
+                            <td>set</td>
+                            <td>score</td>
+                            <td>total</td>
+                            <td>percentage</td>
+                            <td>timeTaken</td>
+                            <td>date</td>
+                            <td>timestamp</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="step-card" data-step="4">
+            <div class="step-header" onclick="toggleStep(this)">
+                <label class="step-check" onclick="event.stopPropagation()">
+                    <input type="checkbox" onchange="updateProgress()">
+                    <div class="checkmark">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                </label>
+                <div class="step-number">04</div>
+                <div class="step-title">Create "STUDENT_DETAILS" Tab</div>
+                <div class="step-toggle">
+                    <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+            </div>
+            <div class="step-body">
+                <div class="step-content">
+                    <p>This sheet stores student profile info — school, class, guardian details, and profile photos.</p>
+                    <ol class="sub-steps">
+                        <li>
+                            <span class="num">1</span>
+                            <span>Click the <em>+</em> button once more for the last tab</span>
+                        </li>
+                        <li>
+                            <span class="num">2</span>
+                            <span>Rename it to exactly: <span class="tag tag-emerald">STUDENT_DETAILS</span></span>
+                        </li>
+                        <li>
+                            <span class="num">3</span>
+                            <span>In <strong>Row 1</strong>, type these column headers (A1 through I1):</span>
+                        </li>
+                    </ol>
+                    <table class="schema-table">
+                        <tr>
+                            <th>A1</th>
+                            <th>B1</th>
+                            <th>C1</th>
+                            <th>D1</th>
+                            <th>E1</th>
+                            <th>F1</th>
+                            <th>G1</th>
+                            <th>H1</th>
+                            <th>I1</th>
+                        </tr>
+                        <tr>
+                            <td>studentId</td>
+                            <td>studentName</td>
+                            <td>schoolName</td>
+                            <td>className</td>
+                            <td>profileImageURL</td>
+                            <td>guardianName</td>
+                            <td>contactNumber</td>
+                            <td>address</td>
+                            <td>createdAt</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="step-card" data-step="5">
+            <div class="step-header" onclick="toggleStep(this)">
+                <label class="step-check" onclick="event.stopPropagation()">
+                    <input type="checkbox" onchange="updateProgress()">
+                    <div class="checkmark">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                </label>
+                <div class="step-number">05</div>
+                <div class="step-title">Paste Script into Apps Script Editor</div>
+                <div class="step-toggle">
+                    <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+            </div>
+            <div class="step-body">
+                <div class="step-content">
+                    <p>This connects your Google Sheet to the Student Panel by creating a backend API.</p>
+                    <ol class="sub-steps">
+                        <li>
+                            <span class="num">1</span>
+                            <span>In your Google Sheet, click <strong>Extensions</strong> in the top menu bar</span>
+                        </li>
+                        <li>
+                            <span class="num">2</span>
+                            <span>Click <strong>Apps Script</strong> — a new browser tab will open with the Script
+                                Editor</span>
+                        </li>
+                        <li>
+                            <span class="num">3</span>
+                            <span><strong>Delete all existing code</strong> in the editor (select all → delete)</span>
+                        </li>
+                        <li>
+                            <span class="num">4</span>
+                            <span>Open the file <span class="tag tag-yellow">backend/google-apps-script.js</span> from
+                                your project folder</span>
+                        </li>
+                        <li>
+                            <span class="num">5</span>
+                            <span><strong>Copy the entire file contents</strong> (Ctrl+A → Ctrl+C)</span>
+                        </li>
+                        <li>
+                            <span class="num">6</span>
+                            <span><strong>Paste</strong> it into the Apps Script editor (Ctrl+V)</span>
+                        </li>
+                        <li>
+                            <span class="num">7</span>
+                            <span>Click the <strong>Save</strong> button (💾 icon) or press Ctrl+S</span>
+                        </li>
+                    </ol>
+                    <p>Now add a helper function to create your first student account. <strong>Scroll to the very bottom
+                            of the script</strong> and add this code:</p>
+                    <div class="code-block">
+                        <span class="code-label">Add at bottom</span>
+                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                        <pre>function addTestStudent() {
+    createStudent(
+        'STU001',
+        'Your Name Here',
+        'your.email@gmail.com',
+        'your_password_here'
+    );
+}</pre>
+                    </div>
+                    <div class="warning-box">
+                        <span class="icon">✏️</span>
+                        <p>Replace <strong>'Your Name Here'</strong>, <strong>'your.email@gmail.com'</strong>, and
+                            <strong>'your_password_here'</strong> with your actual name, email, and desired password.
+                        </p>
+                    </div>
+                    <ol class="sub-steps">
+                        <li>
+                            <span class="num">8</span>
+                            <span>Click <strong>Save</strong> again after adding the function</span>
+                        </li>
+                        <li>
+                            <span class="num">9</span>
+                            <span>In the <strong>function dropdown</strong> (near the ▶ Run button at the top), select
+                                <em>addTestStudent</em></span>
+                        </li>
+                        <li>
+                            <span class="num">10</span>
+                            <span>Click the <strong>▶ Run</strong> button</span>
+                        </li>
+                        <li>
+                            <span class="num">11</span>
+                            <span>A popup will ask for <strong>permissions</strong> — click <em>"Review
+                                    Permissions"</em></span>
+                        </li>
+                        <li>
+                            <span class="num">12</span>
+                            <span>Select your Google account → click <em>"Advanced"</em> → click <em>"Go to (project
+                                    name)"</em> → click <em>"Allow"</em></span>
+                        </li>
+                        <li>
+                            <span class="num">13</span>
+                            <span>The script will run. Go back to your <strong>Google Sheet</strong> and check the
+                                <em>REGISTRATION</em> tab — you should see your student entry with a hashed
+                                password!</span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="step-card" data-step="6">
+            <div class="step-header" onclick="toggleStep(this)">
+                <label class="step-check" onclick="event.stopPropagation()">
+                    <input type="checkbox" onchange="updateProgress()">
+                    <div class="checkmark">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                </label>
+                <div class="step-number">06</div>
+                <div class="step-title">Deploy as Web App</div>
+                <div class="step-toggle">
+                    <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+            </div>
+            <div class="step-body">
+                <div class="step-content">
+                    <p>Deploying as a Web App gives your script a public URL that the Student Panel can communicate
+                        with.</p>
+                    <ol class="sub-steps">
+                        <li>
+                            <span class="num">1</span>
+                            <span>In the Apps Script editor, click <strong>Deploy</strong> (blue button, top right)
+                            </span>
+                        </li>
+                        <li>
+                            <span class="num">2</span>
+                            <span>Click <strong>"New deployment"</strong></span>
+                        </li>
+                        <li>
+                            <span class="num">3</span>
+                            <span>Click the <strong>⚙️ gear icon</strong> next to "Select type" → choose <em>"Web
+                                    app"</em></span>
+                        </li>
+                        <li>
+                            <span class="num">4</span>
+                            <span>Fill in the settings:</span>
+                        </li>
+                    </ol>
+                    <table class="schema-table">
+                        <tr>
+                            <th>Setting</th>
+                            <th>Value</th>
+                        </tr>
+                        <tr>
+                            <td>Description</td>
+                            <td>EnglishJibi Backend v1</td>
+                        </tr>
+                        <tr>
+                            <td>Execute as</td>
+                            <td>Me (your email)</td>
+                        </tr>
+                        <tr>
+                            <td>Who has access</td>
+                            <td>Anyone</td>
+                        </tr>
+                    </table>
+                    <ol class="sub-steps">
+                        <li>
+                            <span class="num">5</span>
+                            <span>Click <strong>"Deploy"</strong></span>
+                        </li>
+                        <li>
+                            <span class="num">6</span>
+                            <span>A popup will show your <strong>Web App URL</strong> — it looks like:<br>
+                                <code
+                                    style="color: var(--blue); font-size:11px;">https://script.google.com/macros/s/AKfycbx.../exec</code>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="num">7</span>
+                            <span><strong>COPY THIS URL</strong> — you need it for the next step. Click the copy icon or
+                                select and Ctrl+C.</span>
+                        </li>
+                    </ol>
+                    <div class="warning-box">
+                        <span class="icon">📋</span>
+                        <p>Keep this URL safe! If you lose it, go to Deploy → Manage deployments to find it again.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 7 -->
+        <div class="step-card" data-step="7">
+            <div class="step-header" onclick="toggleStep(this)">
+                <label class="step-check" onclick="event.stopPropagation()">
+                    <input type="checkbox" onchange="updateProgress()">
+                    <div class="checkmark">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                </label>
+                <div class="step-number">07</div>
+                <div class="step-title">Connect Your App (Set Backend URL)</div>
+                <div class="step-toggle">
+                    <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+            </div>
+            <div class="step-body">
+                <div class="step-content">
+                    <p>This is the final connection step. You'll paste the Web App URL into your project code so the
+                        login page can talk to Google Sheets.</p>
+                    <ol class="sub-steps">
+                        <li>
+                            <span class="num">1</span>
+                            <span>Open the file <span class="tag tag-yellow">backend/api.js</span> in your code
+                                editor</span>
+                        </li>
+                        <li>
+                            <span class="num">2</span>
+                            <span>Find <strong>Line 9</strong> — it currently says:</span>
+                        </li>
+                    </ol>
+                    <div class="code-block">
+                        <span class="code-label">Current (Line 9)</span>
+                        <pre>const BACKEND_URL = null;</pre>
+                    </div>
+                    <ol class="sub-steps">
+                        <li>
+                            <span class="num">3</span>
+                            <span>Replace it with your Web App URL from Step 6:</span>
+                        </li>
+                    </ol>
+                    <div class="code-block">
+                        <span class="code-label">Replace with</span>
+                        <pre>const BACKEND_URL = 'https://script.google.com/macros/s/YOUR_URL_HERE/exec';</pre>
+                    </div>
+                    <ol class="sub-steps">
+                        <li>
+                            <span class="num">4</span>
+                            <span><strong>Save</strong> the file (Ctrl+S)</span>
+                        </li>
+                        <li>
+                            <span class="num">5</span>
+                            <span>Open <strong>login.html</strong> in your browser</span>
+                        </li>
+                        <li>
+                            <span class="num">6</span>
+                            <span>Enter the <strong>email and password</strong> you set in Step 5</span>
+                        </li>
+                        <li>
+                            <span class="num">7</span>
+                            <span>You should be logged in and redirected to the dashboard! 🎉</span>
+                        </li>
+                    </ol>
+                    <div class="warning-box">
+                        <span class="icon">🔄</span>
+                        <p>If you ever update the Apps Script code and re-deploy, the URL will change. You must update
+                            <strong>api.js</strong> with the new URL each time.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Completion banner -->
+        <div class="completion-banner" id="completion-banner">
+            <h2>🎉 Setup Complete!</h2>
+            <p>Your Student Panel is now connected to Google Sheets. Students can log in, practice, and all results will
+                be saved automatically.</p>
+        </div>
+
+    </div>
+
+    <!-- ═══════════════ SCRIPT ═══════════════ -->
+    <script>
+        // Toggle step expand/collapse
+        function toggleStep(header) {
+            const card = header.closest('.step-card');
+            card.classList.toggle('open');
+        }
+
+        // Update progress bar + completion
+        function updateProgress() {
+            const checks = document.querySelectorAll('.step-check input');
+            const total = checks.length;
+            let done = 0;
+
+            checks.forEach((chk, i) => {
+                const card = chk.closest('.step-card');
+                if (chk.checked) {
+                    done++;
+                    card.classList.add('completed');
+                } else {
+                    card.classList.remove('completed');
+                }
+            });
+
+            const pct = Math.round((done / total) * 100);
+            document.getElementById('progress-fill').style.width = pct + '%';
+            document.getElementById('progress-text').innerHTML =
+                `${done} <span>/ ${total} Steps</span>`;
+
+            const banner = document.getElementById('completion-banner');
+            if (done === total) {
+                banner.classList.add('show');
+            } else {
+                banner.classList.remove('show');
+            }
+
+            // Save state
+            const state = Array.from(checks).map(c => c.checked);
+            try { localStorage.setItem('setup_guide_state', JSON.stringify(state)); } catch { }
+        }
+
+        // Copy code
+        function copyCode(btn) {
+            const pre = btn.closest('.code-block').querySelector('pre');
+            navigator.clipboard.writeText(pre.textContent).then(() => {
+                btn.textContent = '✓ Copied';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.textContent = 'Copy';
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+
+        // Restore saved state
+        (function () {
+            try {
+                const state = JSON.parse(localStorage.getItem('setup_guide_state'));
+                if (state && Array.isArray(state)) {
+                    const checks = document.querySelectorAll('.step-check input');
+                    state.forEach((val, i) => {
+                        if (checks[i]) checks[i].checked = val;
+                    });
+                    updateProgress();
+                }
+            } catch { }
+
+            // Collapse all except first
+            document.querySelectorAll('.step-card').forEach((card, i) => {
+                if (i > 0) card.classList.remove('open');
+            });
+        })();
+    </script>
+</body>
+
+</html>
