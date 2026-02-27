@@ -127,7 +127,7 @@ export default {
         title: 'Tenses Video Lectures',
         // ← Display title on the card
 
-        thumbnail: '/46.png',        // ← OPTION A: Leave null → auto YouTube thumbnail
+        thumbnail: null,             // No dedicated thumbnail — shows gradient background
         //   OPTION B: '../../assets/tenses-banner.jpg'
         //   OPTION C: 'https://example.com/image.jpg'
     },

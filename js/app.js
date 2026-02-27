@@ -5,10 +5,19 @@
 // ================================================================
 
 import { Progress } from './progress.js';
-import { checkAuth } from './auth-guard.js';
+import { checkAuth, isAuthenticated } from './auth-guard.js';
 
-// ── Authentication guard (blocks page until verified) ───────────
-await checkAuth();
+// ── Authentication guard (non-blocking) ─────────────────────────
+// 1. Immediate local session check — redirects instantly if expired/missing
+if (!isAuthenticated()) {
+    window.location.href = 'login.html';
+    // Halt module evaluation: throw prevents any page rendering
+    throw new Error('[Auth] No valid local session — redirecting.');
+}
+// 2. Server-side token validation runs in background (does NOT block render).
+//    If the server says the token is invalid (another device logged in),
+//    checkAuth() will redirect to login.html automatically.
+checkAuth().catch(() => { /* handled internally via redirect */ });
 
 // ── Tailwind extension ──────────────────────────────────────────
 if (typeof tailwind !== 'undefined') {
@@ -499,8 +508,15 @@ function _resolveVideoMeta(config, subjectTitle) {
     let thumbnail = vc.thumbnail || null;
 
     if (thumbnail && !thumbnail.startsWith('http') && !thumbnail.startsWith('data:')) {
-        const stripped = thumbnail.replace(/^\/+/, '');
-        thumbnail = stripped.startsWith('../') ? stripped : `../${stripped}`;
+        if (thumbnail.startsWith('/')) {
+            // Root-relative path: strip leading '/' and use from webserver root
+            thumbnail = thumbnail.replace(/^\/+/, '');
+        } else if (!thumbnail.startsWith('./') && !thumbnail.startsWith('../')) {
+            // Bare filename (e.g. '46.png'): resolve relative to subject data dir
+            const subjectId = config?.id || '';
+            thumbnail = subjectId ? `data/${subjectId}/${thumbnail}` : thumbnail;
+        }
+        // Paths starting with './' or '../' are used as-is
     }
 
     if (!thumbnail && playlistId) {

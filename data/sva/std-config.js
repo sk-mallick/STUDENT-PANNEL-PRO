@@ -127,7 +127,7 @@ export default {
         title: 'Subject-Verb Agreement Video Lectures',
         // ← Display title on the card
 
-        thumbnail: '/46.png',        // ← OPTION A: Leave null → auto YouTube thumbnail
+        thumbnail: '46.png',         // Resolved to data/sva/46.png by _resolveVideoMeta
         //   OPTION B: '../../assets/tenses-banner.jpg'
         //   OPTION C: 'https://example.com/image.jpg'
     },
